@@ -1,0 +1,51 @@
+
+
+  <div class="urna">
+    <div class="display-esq">
+
+
+      <div class="tela">
+        <h1>
+          {{numNaTela}}
+
+        </h1>
+        <h1 *ngIf="maisDigitos">Votos para presidente, somente 2 digitos</h1>
+        <h1 *ngIf="votoBranco">Voto Branco</h1>
+        <h1 *ngIf="votoLula">Luis Inacio da Silva</h1>
+        <h1 *ngIf="votoBolsonaro">Jair Messias Bolsonaro</h1>
+        <h1 *ngIf="votoNaoExiste">Candidato Inesistente</h1>
+      </div>
+    </div>
+
+    <div class="display-dir">
+      <p>Justiça Eleitoral</p>
+
+      <div class="numeros">
+
+        <button class="numeros-button" (click)="addNumero('1')">1</button>
+        <button class="numeros-button" (click)="addNumero('2')">2</button>
+        <button class="numeros-button" (click)="addNumero('3')">3</button>
+        <button class="numeros-button" (click)="addNumero('4')">4</button>
+        <button class="numeros-button" (click)="addNumero('5')">5</button>
+        <button class="numeros-button" (click)="addNumero('6')">6</button>
+        <button class="numeros-button" (click)="addNumero('7')">7</button>
+        <button class="numeros-button" (click)="addNumero('8')">8</button>
+        <button class="numeros-button" (click)="addNumero('9')">9</button>
+        <p></p>
+        <button class="numeros-button" (click)="addNumero('0')">0</button>
+        <p></p>
+        <button class="numeros-btn-branco" (click)="branco()">BRANCO</button>
+        <button class="numeros-btn-corrige" (click)="corrige()">CORRIGE</button>
+        <button class="numeros-btn-confirma" (click)="confirma()">CONFIRMA</button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+

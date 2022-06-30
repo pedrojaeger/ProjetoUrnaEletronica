@@ -1,0 +1,113 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+.urna {
+  width: 80%;
+  height: 70vh;
+  background-color: rebeccapurple;
+  margin: 10% auto 0 auto;
+  display: grid;
+  grid-template-areas: "l r";
+  grid-template-columns: 1fr 1fr;
+  border-style: solid;
+  border-radius: 20px;
+
+}
+
+.display-esq {
+  grid-area: l;
+  background-color: #eae9e7;
+
+
+}
+.display-dir {
+  grid-area: r;
+  background-color: blue;
+
+}
+
+.numeros {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+  margin: 5rem 20px 20px 20px;
+  background-color: #343539;
+  color: white;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+}
+
+.numeros-button {
+  height: 4rem;
+  border-radius: 2px;
+  background-color: bisque;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.numeros button:hover {
+  background-color: aqua;
+}
+
+.numeros-btn-branco {
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.numeros-btn-corrige {
+  margin-top: 2rem;
+  height: 4rem;
+  border-radius: 2px;
+  background-color: red;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.numeros-btn-confirma {
+  margin-top: 2rem;
+  height: 5rem;
+  border-radius: 2px;
+  background-color: green;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.tela {
+  background-color: grey;
+  height: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0 auto;
+  margin: 1rem;
+  text-align: center;
+  border: 1px;
+  border-style: solid;
+
+}
+
+
+
+
+
+// ====================== Fazer media Query para celular ============================= //
+//https://www.youtube.com/watch?v=yLTFRELCh2o
+
+
