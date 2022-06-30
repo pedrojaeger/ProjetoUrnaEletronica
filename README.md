@@ -11,7 +11,7 @@
 - CSS
 
 ## Demonstração / Projeto Rodando
-- <a href="https://www.pedrojaeger.com.br/projeto-lanca-venda/"> Projeto Lança Venda </a>
+- <a href="https://pedrojaeger.com.br/projeto-urna-eletronica/"> Projeto Urna Eletrônica </a>
 
 
 - Se você quiser também pode saber um pouquinho mais sobre mim  <a href="https://www.pedrojaeger.com.br"> Ver meu portfólio </a>
