@@ -1,37 +1,87 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-
-
-
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
 
 .urna {
-  width: 80%;
-  height: 70vh;
-  background-color: rebeccapurple;
+  width: 90vw;
+  height: 90vh;
   margin: 10% auto 0 auto;
   display: grid;
   grid-template-areas: "l r";
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
   border-style: solid;
   border-radius: 20px;
-
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .display-esq {
-  grid-area: l;
+  //grid-area: l;
   background-color: #eae9e7;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 
+  .tela {
+    background-color: grey;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    margin: 1rem;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
 
+    .numero {
+      font-size: 150px;
+      margin-top: 15%;
+    }
+
+    .candidato {
+      font-size: 60px;
+      margin-top: 5%;
+    }
+
+    .branco {
+      font-size: 150px;
+      margin: 0 0;
+      color: whitesmoke;
+    }
+
+    .foto-candidato {
+      width: 200px;
+      margin-top: 5%;
+    }
+  }
 }
 .display-dir {
-  grid-area: r;
-  background-color: blue;
+  // grid-area: r;
+  background-color: #eae9e7;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 
+  .tittle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .texto {
+      margin-left: 15%;
+      font-size: 40px;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
 }
 
 .numeros {
@@ -57,7 +107,8 @@
 }
 
 .numeros button:hover {
-  background-color: aqua;
+  background-color: grey;
+  transition: 0.5s;
 }
 
 .numeros-btn-branco {
@@ -90,24 +141,39 @@
   cursor: pointer;
 }
 
-.tela {
-  background-color: grey;
-  height: 80%;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 0 auto;
-  margin: 1rem;
-  text-align: center;
-  border: 1px;
-  border-style: solid;
-
+.numeros-btn-finaliza {
+  grid-column: span 3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: 5rem;
+  border-radius: 2px;
+  background-color: white;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-
-
-
+.logo {
+  background-color: transparent;
+  width: 200px;
+  height: 150px;
+}
 
 // ====================== Fazer media Query para celular ============================= //
 //https://www.youtube.com/watch?v=yLTFRELCh2o
 
+@media only screen and (max-width: 800px) {
+  .urna {
+    grid-template-areas: "r" "l";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 
+  .display-esq {
+    //grid-area: l;
+    height: 100%;
+    background-color: #eae9e7;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+}
