@@ -14,7 +14,7 @@ body {
 
 .urna {
   width: 90vw;
-  height: 90vh;
+  height: 100%;
   margin: 10% auto 0 auto;
   display: grid;
   grid-template-areas: "l r";
@@ -30,10 +30,11 @@ body {
   background-color: #eae9e7;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
+  height: 100%;
 
   .tela {
     background-color: grey;
-    height: 80%;
+    height: 90%;
     align-items: center;
     justify-content: center;
     margin: 0 auto 0 auto;
@@ -85,6 +86,7 @@ body {
 }
 
 .numeros {
+  width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3px;
@@ -159,21 +161,430 @@ body {
   height: 150px;
 }
 
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .resultado-btn {
+    border-radius: 20px;
+    width: 15%;
+    height: 50px;
+    background-color: #eae9e7;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .resultado-btn:hover {
+    border-radius: 20px;
+    transition: 0.4s;
+    background-color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .candidato {
+    margin: 5px;
+  }
+
+  .tabela {
+  }
+}
+
 // ====================== Fazer media Query para celular ============================= //
 //https://www.youtube.com/watch?v=yLTFRELCh2o
 
-@media only screen and (max-width: 800px) {
+// ====================== 1000px ============================= //
+
+@media only screen and (max-width: 1000px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+  }
+
   .urna {
+    width: 90vw;
+    height: 100%;
+    margin: 10% auto 0 auto;
+    display: grid;
     grid-template-areas: "r" "l";
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
+    border-style: solid;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .display-esq {
     //grid-area: l;
-    height: 100%;
     background-color: #eae9e7;
     border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+
+    .tela {
+      background-color: grey;
+      height: 90%;
+
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0 auto;
+      margin: 1rem;
+      text-align: center;
+      border: 1px;
+      border-style: solid;
+
+      .numero {
+        font-size: 150px;
+        margin-top: 15%;
+      }
+
+      .candidato {
+        font-size: 60px;
+        margin-top: 5%;
+      }
+
+      .branco {
+        font-size: 150px;
+        margin: 0 0;
+        color: whitesmoke;
+      }
+
+      .foto-candidato {
+        width: 200px;
+        margin-top: 5%;
+      }
+    }
+  }
+  .display-dir {
+    // grid-area: r;
+    width: 100%;
+    background-color: #eae9e7;
+    border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
+
+    .tittle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .texto {
+        margin-left: 15%;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+
+  .numeros {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    margin: 5rem 20px 20px 20px;
+    background-color: #343539;
+    color: white;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+
+  .numeros-button {
+    height: 4rem;
+    border-radius: 2px;
+    background-color: bisque;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .numeros button:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+
+  .numeros-btn-branco {
+    margin-top: 2rem;
+    height: 4rem;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-corrige {
+    margin-top: 2rem;
+    height: 4rem;
+    border-radius: 2px;
+    background-color: red;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-confirma {
+    margin-top: 2rem;
+    height: 5rem;
+    border-radius: 2px;
+    background-color: green;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-finaliza {
+    grid-column: span 3;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .logo {
+    background-color: transparent;
+    width: 200px;
+    height: 150px;
+  }
+
+  .resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .resultado-btn {
+      border-radius: 20px;
+      width: 30%;
+      height: 50px;
+      background-color: #eae9e7;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .resultado-btn:hover {
+      border-radius: 20px;
+      transition: 0.4s;
+      background-color: #ffffff;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .candidato {
+      margin: 5px;
+    }
+
+    .tabela {
+    }
+  }
+}
+
+// ====================== 550px ============================= //
+
+@media only screen and (max-width: 550px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+  }
+
+  .urna {
+    width: 90vw;
+    height: 100%;
+    margin: 10% auto 0 auto;
+    display: grid;
+    grid-template-areas: "r" "l";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    border-style: solid;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .display-esq {
+    //grid-area: l;
+    background-color: #eae9e7;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 100%;
+    width: 100%;
+
+    .tela {
+      background-color: grey;
+      height: 90%;
+
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0 auto;
+      margin: 1rem;
+      text-align: center;
+      border: 1px;
+      border-style: solid;
+
+      .numero {
+        font-size: 100px;
+        margin-top: 15%;
+      }
+
+      .candidato {
+        font-size: 60px;
+        margin-top: 5%;
+      }
+
+      .branco {
+        font-size: 150px;
+        margin: 0 0;
+        color: whitesmoke;
+      }
+
+      .foto-candidato {
+        width: 200px;
+        margin-top: 5%;
+      }
+    }
+  }
+  .display-dir {
+    // grid-area: r;
+    width: 100%;
+    background-color: #eae9e7;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    .tittle {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      .texto {
+        margin-left: 5%;
+        font-size: 30px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+  }
+
+  .numeros {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3px;
+    //margin: 5rem 20px 20px 20px;
+    background-color: #343539;
+    color: white;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+
+  .numeros-button {
+    height: 3rem;
+    border-radius: 2px;
+    background-color: bisque;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .numeros button:hover {
+    background-color: grey;
+    transition: 0.5s;
+  }
+
+  .numeros-btn-branco {
+    margin-top: 1rem;
+    height: 3rem;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-corrige {
+    margin-top: 1rem;
+    height: 3rem;
+    border-radius: 2px;
+    background-color: red;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-confirma {
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    height: 4rem;
+    border-radius: 2px;
+    background-color: green;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .numeros-btn-finaliza {
+    grid-column: span 3;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    height: 5rem;
+    border-radius: 2px;
+    background-color: white;
+    border: 1px solid transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .logo {
+    background-color: transparent;
+    width: 200px;
+    height: 150px;
+  }
+
+  .resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .resultado-btn {
+      border-radius: 20px;
+      width: 45%;
+      height: 50px;
+      background-color: #eae9e7;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .resultado-btn:hover {
+      border-radius: 20px;
+      transition: 0.4s;
+      background-color: #ffffff;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .candidato {
+      margin: 5px;
+      font-size: 20px;
+    }
+
+    .tabela {
+    }
   }
 }
