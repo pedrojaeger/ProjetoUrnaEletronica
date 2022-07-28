@@ -1,0 +1,46 @@
+<div class="resultado">
+  <button (click)="resultado()" class="resultado-btn">Apurar Resultado</button>
+  <table class="tabela">
+    <tr>
+      <th>
+        <h1 class="candidato">Votos Lula -</h1>
+      </th>
+      <td>
+        <h1 class="candidato">
+          {{ votosSomaLula }}
+        </h1>
+      </td>
+      <td>
+        <h1 class="candidato">-------- {{ percentualLula | percent }}</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <h1 class="candidato">Votos Bolsonaro -</h1>
+      </th>
+      <td>
+        <h1 class="candidato">
+          {{ votosSomaBolsonaro }}
+        </h1>
+      </td>
+      <td>
+        <h1 class="candidato">-------- {{ percentualBolsonaro | percent }}</h1>
+      </td>
+    </tr>
+
+    <tr>
+      <th>
+        <h1 class="candidato">Votos Branco -</h1>
+      </th>
+      <td>
+        <h1 class="candidato">
+          {{ votosSomaBranco }}
+        </h1>
+      </td>
+      <td>
+        <h1 class="candidato">-------- {{ percentualBranco | percent }}</h1>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,107 @@
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .resultado-btn {
+    border-radius: 20px;
+    width: 15%;
+    height: 50px;
+    background-color: #eae9e7;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .resultado-btn:hover {
+    border-radius: 20px;
+    transition: 0.4s;
+    background-color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .candidato {
+    margin: 5px;
+  }
+
+  .tabela {
+  }
+}
+
+// ====================== 1000px ============================= //
+
+@media only screen and (max-width: 1000px) {
+  .resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .resultado-btn {
+      border-radius: 20px;
+      width: 30%;
+      height: 50px;
+      background-color: #eae9e7;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .resultado-btn:hover {
+      border-radius: 20px;
+      transition: 0.4s;
+      background-color: #ffffff;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    .candidato {
+      margin: 5px;
+    }
+
+    .tabela {
+    }
+  }
+}
+
+// ====================== 550px ============================= //
+
+@media only screen and (max-width: 550px) {
+  .resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+
+    .resultado-btn {
+      border-radius: 20px;
+      width: 45%;
+      height: 50px;
+      background-color: #eae9e7;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .resultado-btn:hover {
+      border-radius: 20px;
+      transition: 0.4s;
+      background-color: #ffffff;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .candidato {
+      margin: 5px;
+      font-size: 20px;
+    }
+
+    .tabela {
+    }
+  }
+}
